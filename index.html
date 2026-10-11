@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portofolio Novi Ardianto — Junior Network Administrator." />
+  <title>Novi Ardianto | Network & IT Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#07111f;--panel:#0d1b2d;--panel2:#10233a;--text:#edf5ff;--muted:#9db0c8;--cyan:#4de2d0;--blue:#71a7ff;--line:rgba(176,207,244,.14);--max:1120px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:84px}
+    body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(7,17,31,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:"Space Grotesk",sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:-.04em}
+    .brand span{color:var(--cyan)}
+    nav{display:flex;gap:28px;align-items:center}
+    nav a{font-size:.92rem;color:var(--muted);transition:.2s}
+    nav a:hover{color:var(--cyan)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:12px 17px;font-weight:700;font-size:.92rem;transition:transform .2s,background .2s}
+    .nav-cta,.btn-primary{background:var(--cyan);color:#06201f}
+    .nav-cta:hover,.btn:hover{transform:translateY(-2px)}
+    .menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 12px;font-size:1.1rem}
+    .hero{position:relative;overflow:hidden;padding:105px 0 95px}
+    .hero:before{content:"";position:absolute;width:500px;height:500px;right:-130px;top:-90px;background:radial-gradient(circle,rgba(77,226,208,.17),transparent 68%);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:70px;position:relative}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--cyan);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;margin-bottom:22px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px var(--cyan)}
+    h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.15;letter-spacing:-.04em}
+    h1{font-size:clamp(2.8rem,6vw,5rem);max-width:760px}
+    h1 .accent{color:var(--cyan)}
+    .hero p{max-width:640px;color:var(--muted);font-size:1.08rem;margin:25px 0 30px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap}
+    .btn-secondary{border:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .btn-secondary:hover{background:var(--panel2)}
+    .profile-card{padding:28px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,rgba(16,35,58,.94),rgba(9,23,39,.85));box-shadow:0 25px 90px rgba(0,0,0,.22);position:relative}
+    .avatar{width:112px;height:112px;border-radius:28px;background:linear-gradient(135deg,var(--cyan),var(--blue));display:grid;place-items:center;overflow:hidden;color:#061a28;font:700 2.7rem "Space Grotesk",sans-serif;margin-bottom:10px;box-shadow:0 12px 35px rgba(77,226,208,.18);cursor:pointer;position:relative}.avatar img{width:100%;height:100%;object-fit:cover;display:none}.avatar-hint{font-size:.75rem;color:var(--muted);margin-bottom:20px}.upload-input{display:none}.upload-link{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:9px;padding:7px 10px;color:var(--cyan);font-size:.8rem;font-weight:600;cursor:pointer;margin-top:10px}.upload-link:hover{background:rgba(77,226,208,.08)}.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.cert-card{border:1px solid var(--line);background:var(--panel);border-radius:16px;overflow:hidden}.cert-preview{height:170px;background:linear-gradient(135deg,rgba(77,226,208,.08),rgba(113,167,255,.09));display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line);color:var(--muted);text-align:center;padding:15px}.cert-preview img{width:100%;height:100%;object-fit:contain;display:none;background:#07111f}.cert-placeholder-icon{font-size:2rem;color:var(--cyan);display:block;margin-bottom:7px}.cert-body{padding:16px}.cert-body h4{font-family:"Space Grotesk",sans-serif;font-size:1rem;line-height:1.4;margin-bottom:4px}.cert-body p{font-size:.82rem;color:var(--muted)}.cert-actions{display:flex;gap:8px;flex-wrap:wrap}.cert-remove{background:none;border:0;color:#ff9b9b;font:inherit;font-size:.8rem;cursor:pointer;margin-top:10px}.image-note{font-size:.82rem;color:var(--muted);margin-top:14px}
+    .profile-card h2{font-size:1.55rem;margin-bottom:4px}
+    .role{color:var(--cyan);font-weight:600;font-size:.92rem}
+    .profile-meta{display:grid;gap:13px;margin-top:24px;padding-top:21px;border-top:1px solid var(--line)}
+    .meta-row{display:flex;gap:12px;color:var(--muted);font-size:.9rem;overflow-wrap:anywhere}
+    .meta-icon{color:var(--cyan);width:19px;flex-shrink:0}
+    section{padding:82px 0}
+    .section-head{max-width:650px;margin-bottom:38px}
+    .kicker{color:var(--cyan);font-size:.8rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700;margin-bottom:11px}
+    h2.section-title{font-size:clamp(2rem,4vw,3rem);margin-bottom:15px}
+    .section-desc{color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .card{border:1px solid var(--line);background:var(--panel);border-radius:20px;padding:27px}
+    .card h3{font-size:1.18rem;margin-bottom:12px}
+    .card p{color:var(--muted)}
+    .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .stat{padding:17px 12px;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:14px}
+    .stat strong{display:block;color:var(--cyan);font:700 1.55rem "Space Grotesk",sans-serif}
+    .stat span{font-size:.78rem;color:var(--muted)}
+    .timeline{display:grid;gap:16px}
+    .timeline-item{display:grid;grid-template-columns:190px 1fr;gap:25px;padding:25px 28px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
+    .timeline-date{color:var(--cyan);font-weight:700;font-size:.88rem}
+    .timeline-item h3{font-size:1.2rem;margin-bottom:5px}
+    .company{color:var(--muted);font-size:.92rem;margin-bottom:12px}
+    ul.clean{list-style:none;display:grid;gap:7px;color:var(--muted)}
+    ul.clean li:before{content:"↗";color:var(--cyan);margin-right:10px}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .skill-card{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:24px}
+    .skill-icon{font-size:1.5rem;margin-bottom:14px}
+    .skill-card h3{font-size:1.08rem;margin-bottom:10px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .tag{font-size:.78rem;padding:6px 10px;border-radius:8px;background:rgba(77,226,208,.08);color:#a9fff3;border:1px solid rgba(77,226,208,.15)}
+    .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .edu-card{display:flex;gap:16px;align-items:flex-start}
+    .edu-mark{width:45px;height:45px;flex-shrink:0;display:grid;place-items:center;background:rgba(113,167,255,.12);border:1px solid rgba(113,167,255,.2);border-radius:13px;color:var(--blue);font-size:1.2rem}
+    .edu-card h3{font-size:1.05rem;margin-bottom:5px}
+    .edu-card .period{font-size:.85rem;color:var(--cyan);margin-bottom:7px}
+    .edu-card p{font-size:.9rem}
+    .cert-list{display:grid;gap:13px}
+    .contact-panel{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;padding:38px;border:1px solid rgba(77,226,208,.22);border-radius:24px;background:linear-gradient(120deg,rgba(77,226,208,.08),rgba(113,167,255,.06))}
+    .contact-panel h2{font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:12px}
+    .contact-panel p{color:var(--muted);max-width:620px}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.85rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:none}
+    @media(max-width:800px){.cert-grid{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr;gap:40px}.profile-card{max-width:470px}.about-grid,.edu-grid{grid-template-columns:1fr}.skills-grid{grid-template-columns:repeat(2,1fr)}.timeline-item{grid-template-columns:1fr;gap:8px}.contact-panel{grid-template-columns:1fr}.hero{padding-top:75px}}
+    @media(max-width:600px){.cert-grid{grid-template-columns:1fr}.cert-preview{height:200px}.wrap{width:min(100% - 30px,var(--max))}.nav{height:68px}nav{display:none;position:absolute;top:68px;left:0;right:0;background:#091626;padding:20px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}nav.open{display:flex}.nav-cta{display:none}.menu-btn{display:block}.hero{padding:65px 0}.hero p{font-size:1rem}section{padding:65px 0}.skills-grid{grid-template-columns:1fr}.stat-grid{grid-template-columns:1fr 1fr 1fr}.card,.timeline-item{padding:21px}.contact-panel{padding:25px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#beranda">NOVI<span>.</span></a>
+      <nav id="navMenu" aria-label="Navigasi utama">
+        <a href="#tentang">Tentang</a><a href="#pengalaman">Pengalaman</a><a href="#keahlian">Keahlian</a><a href="#pendidikan">Pendidikan</a><a href="#kontak">Kontak</a>
+      </nav>
+      <a class="nav-cta" href="#kontak">Hubungi Saya ↗</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> IT • Networking • Infrastructure</div>
+          <h1>Membangun koneksi,<br><span class="accent">menjaga jaringan.</span></h1>
+          <p>Saya Novi Ardianto, calon profesional IT yang berfokus pada administrasi jaringan, instalasi jaringan internet, dan monitoring jaringan. Saya senang belajar, memecahkan masalah, serta membangun infrastruktur yang andal.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#pengalaman">Lihat Pengalaman <span>↘</span></a>
+            <a class="btn btn-secondary" href="mailto:240104012@mhs.udb.ac.id">✉ Email Saya</a>
+          </div>
+        </div>
+        <aside class="profile-card">
+          <div class="avatar" aria-label="Foto profil Novi Ardianto">
+            <img
+              src="images/profil.jpg"
+              alt="Foto profil Novi Ardianto"
+              style="display: block;"
+            />
+          </div>
+          <div class="avatar-hint">Profil profesional</div>
+          <h2>Novi Ardianto</h2>
+          <div class="role">Junior Network Administrator</div>
+          <div class="profile-meta">
+            <div class="meta-row"><span class="meta-icon">✉</span><a href="mailto:240104012@mhs.udb.ac.id">240104012@mhs.udb.ac.id</a></div>
+            <div class="meta-row"><span class="meta-icon">☎</span><a href="tel:+6281542734402">+62 815-4273-4402</a></div>
+            <div class="meta-row"><span class="meta-icon">↓</span><a href="CV_Novi_Ardianto.pdf" download="CV_Novi_Ardianto.pdf">Unduh CV Saya (PDF)</a></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="tentang">
+      <div class="wrap">
+        <div class="section-head reveal"><div class="kicker">01 / Tentang Saya</div><h2 class="section-title">Teknologi yang bekerja lebih baik, dimulai dari koneksi yang tepat.</h2><p class="section-desc">Mahasiswa D3 Teknik Komputer di Universitas Duta Bangsa Surakarta dengan pengalaman praktik di bidang jaringan komputer serta keterlibatan aktif dalam organisasi kampus.</p></div>
+        <div class="about-grid">
+          <article class="card reveal"><h3>Profil Singkat</h3><p>Saya memiliki pengalaman instalasi sistem operasi dan aplikasi, instalasi LAN, crimping kabel UTP, instalasi internet, serta monitoring jaringan. Saya terus mengembangkan keterampilan teknis dan kemampuan kolaborasi untuk berkontribusi dalam tim IT.</p>
+            <div class="stat-grid"><div class="stat"><strong>2+</strong><span>Tahun organisasi*</span></div><div class="stat"><strong>2</strong><span>Pengalaman praktik</span></div><div class="stat"><strong>3</strong><span>Topik sertifikasi</span></div></div>
+          </article>
+          <article class="card reveal"><h3>Aktivitas Organisasi</h3><p>Aktif selama kurang lebih dua tahun di Himpunan Mahasiswa sebagai bagian dari divisi Penelitian dan Pengembangan. Pengalaman ini membantu melatih komunikasi, kerja sama tim, dan kebiasaan belajar secara berkelanjutan.</p><div class="tags"><span class="tag">Kolaborasi</span><span class="tag">Komunikasi</span><span class="tag">Riset & Pengembangan</span></div></article>
+        </div>
+        <p style="font-size:.76rem;color:var(--muted);margin-top:12px">*Berdasarkan ringkasan pada CV.</p>
+      </div>
+    </section>
+
+    <section id="pengalaman">
+      <div class="wrap">
+        <div class="section-head reveal"><div class="kicker">02 / Pengalaman</div><h2 class="section-title">Pengalaman praktik di dunia IT.</h2><p class="section-desc">Pengalaman yang membangun fondasi keterampilan teknis di bidang komputer dan jaringan.</p></div>
+        <div class="timeline">
+          <article class="timeline-item reveal"><div class="timeline-date">Agustus 2025 — November 2025</div><div><h3>Peserta Magang</h3><div class="company">PT Tekno Indo Jaya</div><ul class="clean"><li>Melakukan instalasi jaringan internet.</li><li>Melakukan monitoring jaringan.</li></ul></div></article>
+          <article class="timeline-item reveal"><div class="timeline-date">Januari 2023 — Mei 2023</div><div><h3>Praktik Kerja Lapangan</h3><div class="company">Toko Komputer 2IT</div><ul class="clean"><li>Instalasi Windows dan aplikasi.</li><li>Instalasi jaringan LAN.</li><li>Crimping kabel UTP.</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="keahlian">
+      <div class="wrap">
+        <div class="section-head reveal"><div class="kicker">03 / Keahlian</div><h2 class="section-title">Perangkat dan keterampilan yang saya kembangkan.</h2><p class="section-desc">Keterampilan berikut dirangkum dari informasi yang tercantum pada CV.</p></div>
+        <div class="skills-grid">
+          <article class="skill-card reveal"><div class="skill-icon">⌁</div><h3>Administrasi Jaringan</h3><p class="section-desc">Dasar konfigurasi dan pengelolaan jaringan komputer.</p><div class="tags"><span class="tag">MikroTik</span><span class="tag">Winbox</span><span class="tag">LAN</span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon">⌘</div><h3>Instalasi & Troubleshooting</h3><p class="section-desc">Instalasi sistem operasi, aplikasi, dan perangkat jaringan.</p><div class="tags"><span class="tag">Windows</span><span class="tag">Aplikasi</span><span class="tag">Kabel UTP</span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon">◉</div><h3>Monitoring Jaringan</h3><p class="section-desc">Pengalaman memantau jaringan dan instalasi internet.</p><div class="tags"><span class="tag">Monitoring</span><span class="tag">Internet</span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon">⌨</div><h3>Pengembangan Web</h3><p class="section-desc">Memiliki kemampuan membuat web sederhana.</p><div class="tags"><span class="tag">Web Dasar</span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon">◎</div><h3>Komunikasi</h3><p class="section-desc">Mampu menyampaikan informasi dan berkoordinasi dengan baik.</p><div class="tags"><span class="tag">Komunikasi</span></div></article>
+          <article class="skill-card reveal"><div class="skill-icon">◇</div><h3>Kerja Sama Tim</h3><p class="section-desc">Terbiasa bekerja bersama orang lain dalam kegiatan organisasi.</p><div class="tags"><span class="tag">Teamwork</span><span class="tag">Kolaborasi</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pendidikan">
+      <div class="wrap">
+        <div class="section-head reveal"><div class="kicker">04 / Pendidikan & Sertifikasi</div><h2 class="section-title">Belajar sebagai proses berkelanjutan.</h2></div>
+        <div class="edu-grid">
+          <article class="card edu-card reveal"><div class="edu-mark">⌂</div><div><div class="period">2024 — Sekarang</div><h3>Universitas Duta Bangsa Surakarta</h3><p>D3 Teknik Komputer</p></div></article>
+          <article class="card edu-card reveal"><div class="edu-mark">▤</div><div><div class="period">2021 — 2024</div><h3>SMK Negeri 1 Sawit</h3><p>Teknik Komputer dan Jaringan</p></div></article>
+        </div>
+        <div class="section-head reveal" style="margin:38px 0 18px"><h3 style="font-size:1.35rem">Sertifikat</h3></div>
+        <div class="cert-grid">
+          <article class="cert-card reveal"><div class="cert-preview">
+        <img
+          src="images/sertifikat-1.jpg"
+          alt="Sertifikat StartUp Digital Open Source"
+          style="display: block;"
+        />
+      </div><div class="cert-body"><h4>Workshop “StartUp Digital Open Source”</h4><p>Workshop</p></div></article>
+          <article class="cert-card reveal"><div class="cert-preview">
+      <img
+        src="images/sertifikat-2.jpg"
+        alt="Seminar Strategi Bisnis “Era AI dan Blockchain”"
+        style="display: block;"
+      />
+    </div><div class="cert-body"><h4>Seminar Strategi Bisnis “Era AI dan Blockchain”</h4><p>Seminar</p></div></article>
+          <article class="cert-card reveal"><div class="cert-preview">
+      <img
+        src="images/sertifikat-3.jpg"
+        alt="Implementasi Jaringan Komputer untuk Dunia Pendidikan dan Industri"
+        style="display: block;"
+      />
+    </div><div class="cert-body"><h4>Webinar “Implementasi Jaringan Komputer untuk Dunia Pendidikan dan Industri”</h4><p>Webinar</p></div></article>
+        </div>
+        <p class="image-note">Informasi sertifikasi ditampilkan sebagai dokumentasi statis. Foto profil dan sertifikat hanya dapat diperbarui dengan mengedit file website oleh pemilik, lalu menerbitkan ulang website.</p>
+      </div>
+    </section>
+
+    <section id="kontak">
+      <div class="wrap">
+        <div class="contact-panel reveal"><div><div class="kicker">05 / Kontak</div><h2>Mari terhubung dan berdiskusi.</h2><p>Terbuka untuk kesempatan belajar, kolaborasi, dan peluang di bidang jaringan komputer maupun IT support.</p></div><a class="btn btn-primary" href="mailto:240104012@mhs.udb.ac.id">Kirim Email ↗</a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Novi Ardianto</span><span>Dibuat dengan semangat belajar dan teknologi.</span></div></footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navMenu = document.getElementById('navMenu');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+      menuBtn.textContent = isOpen ? '✕' : '☰';
+    });
+    navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Foto bersifat statis: pengunjung tidak memiliki kontrol untuk mengunggah atau menghapus gambar. Tombol CV mengunduh file CV_Novi_Ardianto.pdf yang disertakan bersama website.
+    // Pemilik memperbarui gambar dengan mengedit file HTML dan aset website, lalu menerbitkan ulang.
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
